@@ -1,1 +1,8 @@
-llvm_project/*
+#source
+llvm-project/
+
+#nano temporary
+*~
+
+#emacs temporary
+\#*
