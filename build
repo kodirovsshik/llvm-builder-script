@@ -1,0 +1,12 @@
+gen_stage () {
+	cat .data/makefile_stage.template | sed "s/%N/$1/g"
+}
+
+gen_makefile() {
+	cat .data/makefile.template | cpp-14 -P
+	gen_stage 1
+	gen_stage 2
+}
+
+gen_makefile > a.txt
+#make $@ -f <(gen_makefile) -n

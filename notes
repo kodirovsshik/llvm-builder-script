@@ -1,0 +1,19 @@
+
+-nostdinc
+
+    Do not search the standard system directories or compiler builtin directories for include files.
+
+-nostdlibinc
+
+    Do not search the standard system directories for include files, but do search compiler builtin include directories.
+
+-nobuiltininc
+
+    Do not search s builtin directory for include files.
+
+-nostdinc++
+
+    Do not search the system C++ standard library directory for include files.
+
+
+x86_64-pc-none-elf
