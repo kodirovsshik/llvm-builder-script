@@ -1,12 +1,6 @@
-gen_stage () {
-	cat .data/makefile_stage.template | sed "s/%N/$1/g"
-}
+set -e
 
-gen_makefile() {
-	cat .data/makefile.template | cpp-14 -P
-	gen_stage 1
-	gen_stage 2
-}
+[ $(dpkg --list | grep 'ii  m4 ' | wc -l) = 1 ] || sudo apt install m4 -y
+m4 .data/makefile.m4
 
-gen_makefile > a.txt
-#make $@ -f <(gen_makefile) -n
+#make $@ -f <(m4 .data/makefile.m4) -n
