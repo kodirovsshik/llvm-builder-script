@@ -3,6 +3,8 @@ llvm-project/
 
 #nano temporary
 *~
+.*~
 
 #emacs temporary
 \#*
+.\#*
