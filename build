@@ -1,6 +1,6 @@
 set -e
 
 [ $(dpkg --list | grep 'ii  m4 ' | wc -l) = 1 ] || sudo apt install m4 -y
-m4 .data/makefile.m4
 
+m4 .data/makefile.m4 | sed '/./,$!d'
 #make $@ -f <(m4 .data/makefile.m4) -n

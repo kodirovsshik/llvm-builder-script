@@ -17,3 +17,9 @@
 
 
 x86_64-pc-none-elf
+
+options:
+#opt(1,LLVM_ENABLE_PLUGINS=ON) #wtf is this
+#opt(1,LLVM_STATIC_LINK_CXX_STDLIB=...) #wtf is this
+HAVE_CLANG_PLUGIN_SUPPORT
+subdirs: lib, tools, runtime
